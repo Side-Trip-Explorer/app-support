@@ -2,10 +2,90 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>アプリサポート・開発者ページ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side-Trip Explorer | App Support</title>
+    <style>
+        :root {
+            --primary-color: #2b5876;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --sub-text: #666666;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 680px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-top: 0;
+            border-bottom: 2px solid #eef2f5;
+            padding-bottom: 12px;
+        }
+        h2 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-top: 28px;
+        }
+        p {
+            line-height: 1.7;
+            color: var(--text-color);
+        }
+        .contact-box {
+            background-color: #f0f4f8;
+            border-left: 4px solid var(--primary-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .contact-box a {
+            color: var(--primary-color);
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--sub-text);
+            border-top: 1px solid #eef2f5;
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>アプリサポートページ</h1>
-    <p>ご意見・お問い合わせはメールにて受け付けております。</p>
+    <div class="container">
+        <h1>Side-Trip Explorer サポート</h1>
+        <p>Side-Trip Explorer が提供するアプリをご利用いただきありがとうございます。アプリに関するお問い合わせや不具合のご報告は、下記より受け付けております。</p>
+
+        <div class="contact-box">
+            <strong>お問い合わせ窓口：</strong><br>
+            <a href="mailto:your-email@example.com">your-email@example.com</a>
+        </div>
+
+        <h2>プライバシーポリシー（Privacy Policy）</h2>
+        <p>当開発者は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。アプリ内で取得されるデータがある場合は、サービスの向上および機能提供の目的にのみ使用し、第三者へ無断で提供することはございません。</p>
+
+        <footer>
+            &copy; Side-Trip Explorer. All rights reserved.
+        </footer>
+    </div>
 </body>
 </html>
