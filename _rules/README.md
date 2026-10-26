@@ -86,13 +86,14 @@
 
 ## 6. 更新の手順
 
-1. **最新を取得する。** 作業用コピーはプロジェクトの外に置く。
+1. **最新を取得する。** 作業用コピーはプロジェクトの外に、**アプリごとに別に**置く（`<アプリ名>` は `picdule`、`nenpi` など）。
+   同じコピーを別のアプリのセッションと使うと、相手のローカルのコミットが自分の push に混ざる（2026-10-26〜27 に2回起きた）。
 
    | 環境 | 作業用コピーの場所 |
    |---|---|
-   | Mac（zsh） | `~/.cache/side-trip-explorer/app-support` |
-   | Windows（Git Bash） | `$HOME/.cache/side-trip-explorer/app-support` |
-   | Windows（PowerShell） | `$env:USERPROFILE\.cache\side-trip-explorer\app-support` |
+   | Mac（zsh） | `~/.cache/side-trip-explorer/app-support-<アプリ名>` |
+   | Windows（Git Bash） | `$HOME/.cache/side-trip-explorer/app-support-<アプリ名>` |
+   | Windows（PowerShell） | `$env:USERPROFILE\.cache\side-trip-explorer\app-support-<アプリ名>` |
 
    無ければ `gh repo clone Side-Trip-Explorer/app-support <場所>`、あれば `git pull`。
    未プッシュのコミットや未コミットの変更が残っていたら、先にオーナーに知らせる。
@@ -118,7 +119,7 @@
    外のファイルがあれば止める。
 7. **ローカルでコミットする。** 件名は英語の命令形、本文は何を・なぜ。
 8. **オーナーに見せる。** `git log --oneline origin/main..HEAD` と `git diff origin/main` を要約して見せ、
-   プッシュの OK をもらう。
+   プッシュの OK をもらう。`git log origin/main..HEAD` の**全行が自分のアプリのコミット**であることも確かめる。
 9. **プッシュの直前に取り込む。** `git pull --rebase`。取り込んだ変更があれば、手順 6 と 8 をやり直す。
 10. **プッシュして確かめる。** `git push` の後、数分おいて公開ページを開き、
     最終更新日と変更した文が反映されたことを確かめる（GitHub Pages の反映には時間がかかる）。
